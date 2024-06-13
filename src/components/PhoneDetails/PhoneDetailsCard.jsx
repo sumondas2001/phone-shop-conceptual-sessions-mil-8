@@ -1,9 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link, json } from "react-router-dom";
+import swal from "sweetalert";
 
 
 const PhoneDetailsCard = ({ phone }) => {
-     console.log(phone)
-     const { id, brand_name, image, phone_name, price, rating } = phone || {}
+     // console.log(phone)
+     const { id, brand_name, image, phone_name, price, } = phone || {}
+
+     const handelFavoeritesItem = () => {
+          const addFavoritesItemArray = [];
+          const favoritesItem = JSON.parse(localStorage.getItem('favorites'));
+
+          if (!favoritesItem) {
+               addFavoritesItemArray.push(phone);
+               localStorage.setItem('favorites', JSON.stringify(addFavoritesItemArray));
+               swal("Good job!", "Favorites Item Add Succesfully!", "success");
+          }
+          else {
+               const isExits = favoritesItem.find(item => item.id === id)
+               if (!isExits) {
+
+                    addFavoritesItemArray.push(...favoritesItem, phone);
+                    localStorage.setItem('favorites', JSON.stringify(addFavoritesItemArray));
+                    swal("Good job!", "Favorites Item Add Succesfully!", "success");
+
+               } else {
+                    swal("Error!", "This Item Is Already Add", "error");
+               }
+          }
+     }
+
+
+
      return (
           <div className="">
                <div className="flex justify-center items-center h-[80vh]">
@@ -27,7 +54,7 @@ const PhoneDetailsCard = ({ phone }) => {
                                    $
                               </p>
                               <div>
-                                   <Link>
+                                   <Link onClick={handelFavoeritesItem}>
                                         <button className="font-bold bg-lime-500 px-6 py-3 hover:bg-lime-400">ADD TO FAVOURITES</button>
                                    </Link>
                               </div>

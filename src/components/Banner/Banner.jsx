@@ -2,8 +2,8 @@
 
 const Banner = () => {
      return (
-          <div className="max-w-6xl mx-auto h-96 bg-lime-300 my-10 rounded-lg">
-               <h1 className="text xl text-center">Banner section</h1>
+          <div className="max-w-6xl mx-auto  my-10 ">
+               <img className="h-[60vh] w-full rounded-xl" src={'../../../public/img/tech-daily-UODNyThs0vg-unsplash.jpg'} alt="" />
           </div>
      );
 };

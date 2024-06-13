@@ -8,7 +8,7 @@ const Navbar = () => {
                     <ul className="flex lg:justify-between md:justify-around justify-around max-w-6xl mx-auto my-4 ">
                          <div>
 
-                              <a className="text-2xl font-extrabold text-lime-500" href="/">Phone Shop</a>
+                              <a className="text-2xl font-extrabold text-lime-500" href="/">Phone Bazar</a>
                          </div>
 
                          <div className="flex gap-7 font-medium">
