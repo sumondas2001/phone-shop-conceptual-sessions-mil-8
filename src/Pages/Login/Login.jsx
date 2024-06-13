@@ -2,10 +2,10 @@
 const Login = () => {
      return (
           <div>
-               <div className=" min-h-screen  items-center justify-center flex ">
-                    <div className=" flex-col lg:flex-row-reverse p-10 bg-lime-300 rounded-xl">
+               <div className=" min-h-screen  items-center justify-center flex bg-slate-200">
+                    <div className=" flex-col lg:flex-row-reverse p-10 bg-lime-300 rounded-xl shadow-2xl">
                          <div className="text-center  lg:text-left mt-10 mb-10 ">
-                              <h1 className="text-4xl font-bold">Login now!</h1>
+                              <h1 className="text-4xl font-bold text-red-400">Login now</h1>
 
                          </div>
                          <div className="card shrink-0 w-full max-w-sm ">
@@ -31,6 +31,8 @@ const Login = () => {
                     </div>
                </div>
           </div>
+
+
      );
 };
 

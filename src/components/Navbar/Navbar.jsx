@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
      return (
           <div >
-               <nav className="shadow-xl  py-2 bg-slate-200">
-                    <ul className="flex justify-between max-w-6xl mx-auto my-4 ">
+               <nav className="shadow-2xl  py-1 bg-lime-200 ">
+                    <ul className="flex lg:justify-between md:justify-around justify-around max-w-6xl mx-auto my-4 ">
                          <div>
 
                               <a className="text-2xl font-extrabold text-lime-500" href="/">Phone Shop</a>
